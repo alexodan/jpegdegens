@@ -1,9 +1,9 @@
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require('dotenv')
+dotenv.config()
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.ts', // bundle"s entry point
@@ -54,4 +54,4 @@ module.exports = {
       poll: 1000,
     },
   },
-};
+}
