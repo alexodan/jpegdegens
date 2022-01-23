@@ -1,21 +1,12 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-<<<<<<< HEAD
     "/Users/alexdan/Development/alexodan/jpegdegens/contracts/HelloWorld.sol": {
       "lastModificationDate": 1642903550269,
       "contentHash": "6bab1af3a195cbd00ebb0779b0088c32",
       "sourceName": "contracts/HelloWorld.sol",
       "solcConfig": {
         "version": "0.8.4",
-=======
-    "/home/nubuxela/dev/jpegdegens/contracts/HelloWorld.sol": {
-      "lastModificationDate": 1641134105580,
-      "contentHash": "77c55b2b49bac8b9d23e036c51040e51",
-      "sourceName": "contracts/HelloWorld.sol",
-      "solcConfig": {
-        "version": "0.8.10",
->>>>>>> master
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -30,21 +21,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "HelloWorld"
-      ]
-<<<<<<< HEAD
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["HelloWorld"]
     },
     "/Users/alexdan/Development/alexodan/jpegdegens/contracts/Counter.sol": {
       "lastModificationDate": 1642956547236,
@@ -66,22 +50,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Counter"
-      ]
+      "imports": ["hardhat/console.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Counter"]
     },
     "/Users/alexdan/Development/alexodan/jpegdegens/node_modules/hardhat/console.sol": {
       "lastModificationDate": 1641094441462,
@@ -103,22 +79,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "console"
-      ]
-=======
->>>>>>> master
+      "versionPragmas": [">=0.4.22 <0.9.0"],
+      "artifacts": ["console"]
     }
   }
 }
