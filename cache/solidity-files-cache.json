@@ -1,12 +1,21 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
+<<<<<<< HEAD
     "/Users/alexdan/Development/alexodan/jpegdegens/contracts/HelloWorld.sol": {
       "lastModificationDate": 1642903550269,
       "contentHash": "6bab1af3a195cbd00ebb0779b0088c32",
       "sourceName": "contracts/HelloWorld.sol",
       "solcConfig": {
         "version": "0.8.4",
+=======
+    "/home/nubuxela/dev/jpegdegens/contracts/HelloWorld.sol": {
+      "lastModificationDate": 1641134105580,
+      "contentHash": "77c55b2b49bac8b9d23e036c51040e51",
+      "sourceName": "contracts/HelloWorld.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+>>>>>>> master
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -35,6 +44,7 @@
       "artifacts": [
         "HelloWorld"
       ]
+<<<<<<< HEAD
     },
     "/Users/alexdan/Development/alexodan/jpegdegens/contracts/Counter.sol": {
       "lastModificationDate": 1642956547236,
@@ -107,6 +117,8 @@
       "artifacts": [
         "console"
       ]
+=======
+>>>>>>> master
     }
   }
 }
