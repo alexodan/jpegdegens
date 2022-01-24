@@ -1,38 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/alexdan/Development/alexodan/jpegdegens/contracts/HelloWorld.sol": {
-      "lastModificationDate": 1642903550269,
-      "contentHash": "6bab1af3a195cbd00ebb0779b0088c32",
-      "sourceName": "contracts/HelloWorld.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": ["ast"]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["HelloWorld"]
-    },
-    "/Users/alexdan/Development/alexodan/jpegdegens/contracts/Counter.sol": {
-      "lastModificationDate": 1642956547236,
-      "contentHash": "74d2fea5068ffcd4da83d609328a4097",
+    "/home/nubuxela/dev/jpegdegens/contracts/Counter.sol": {
+      "lastModificationDate": 1642970942571,
+      "contentHash": "6fdba862a3ca97f1e946d06a5a78ae28",
       "sourceName": "contracts/Counter.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -50,17 +21,25 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": ["ast"]
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["hardhat/console.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Counter"]
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counter"
+      ]
     },
-    "/Users/alexdan/Development/alexodan/jpegdegens/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1641094441462,
+    "/home/nubuxela/dev/jpegdegens/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1642968212890,
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -79,14 +58,55 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": ["ast"]
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [">=0.4.22 <0.9.0"],
-      "artifacts": ["console"]
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/home/nubuxela/dev/jpegdegens/contracts/HelloWorld.sol": {
+      "lastModificationDate": 1642965654738,
+      "contentHash": "6bab1af3a195cbd00ebb0779b0088c32",
+      "sourceName": "contracts/HelloWorld.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HelloWorld"
+      ]
     }
   }
 }

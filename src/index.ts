@@ -1,61 +1,64 @@
-import { ethers } from 'ethers';
+import { ethers } from 'ethers'
+import Counter from '../artifacts/contracts/Counter.sol/Counter.json'
+
+const countDisplay = document.querySelector('#counter-display')
 
 async function hasSigners(): Promise<boolean> {
   //@ts-ignore
-  const metamask = window.ethereum;
+  const metamask = window.ethereum
   const signers = await (metamask.request({
     method: 'eth_accounts',
-  }) as Promise<string[]>);
-  return signers.length > 0;
+  }) as Promise<string[]>)
+  return signers.length > 0
 }
 
 async function requestAccess(): Promise<boolean> {
   //@ts-ignore
   const result = (await window.ethereum.request({
     method: 'eth_requestAccounts',
-  })) as string[];
-  return result && result.length > 0;
+  })) as string[]
+  return result && result.length > 0
 }
 
-async function getContract() {
-  const address = process.env.CONTRACT_ADDRESS;
-
+async function run() {
+  const address = process.env.CONTRACT_ADDRESS
   if (!(await hasSigners()) && !(await requestAccess())) {
-    console.log('You are in trouble, no one wants to play');
+    console.log('You are in trouble, no one wants to play')
   }
 
   // @ts-ignore
-  const signer = new ethers.providers.Web3Provider(window.ethereum).getSigner();
+  const signer = new ethers.providers.Web3Provider(window.ethereum).getSigner()
   const contract = new ethers.Contract(
     address,
-    [
-      'function increment() public',
-      'function getCount() public view returns (uint256)',
-    ], // abi
+    Counter.abi, // abi
     signer
-  );
+  )
+  console.log(contract.filters)
+  contract.on(contract.filters.CounterIncrement(), function (count) {
+    writeCount(count)
+  })
 
-  console.log('Counter:', await contract.getCount());
+  const count = await contract.getCount()
+  writeCount(count)
 
-  return contract;
+  const incrementBtn = document.querySelector('#increment')
+  incrementBtn.addEventListener('click', async function () {
+    // NOTE: without events:
+    // const tx = await increment()
+    // await tx.wait()
+    // writeCount()
+    await contract.increment()
+  })
+
+  return contract
 }
 
-async function increment() {
-  const contract = await getContract();
-  await contract.increment();
+async function writeCount(count) {
+  // const contract = await getContract()
+  // const count = await contract.getCount()
+
+  console.log('Count:', count)
+  countDisplay.innerHTML = count
 }
 
-async function writeCount() {
-  const contract = await getContract();
-  const countDisplay = document.querySelector('#counter-display');
-  const count = await contract.getCount();
-  console.log('Count:', count);
-  countDisplay.innerHTML = count;
-}
-
-const incrementBtn = document.querySelector('#increment');
-
-incrementBtn.addEventListener('click', async function () {
-  await increment();
-  writeCount();
-});
+run()
